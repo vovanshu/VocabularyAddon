@@ -1,0 +1,25 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var \ItemsReview\Form\ContractsForm $form
+ */
+
+$plugins = $this->getHelperPluginManager();
+$translate = $plugins->get('translate');
+$hyperlink = $plugins->get('hyperlink');
+$this->htmlElement('body')->appendAttribute('class', 'property edit');
+$form->prepare();
+?>
+
+<?= $this->pageTitle($translate('Edit'), 1, $translate('Properties')) ?>
+<?= $this->form()->openTag($form) ?>
+
+<div id="page-actions">
+    <?= $hyperlink($translate('Properties'), $this->url('admin/id', ['controller' => 'vocabulary', 'action' => 'properties', 'id' => $entity->vocabulary()->id()]), ['class' => 'button']) ?>
+    <?php echo $this->cancelButton(); ?>
+    <button type="submit"><?= $translate('Save') ?></button>
+</div>
+
+<?= $this->formCollection($form, false) ?>
+
+<?= $this->form()->closeTag() ?>

@@ -1,0 +1,22 @@
+<?php
+$this->headScript()->appendFile($this->assetUrl('js/vocabulary-form.js', 'Omeka'));
+$this->htmlElement('body')->appendAttribute('class', 'add vocabularies');
+$translate = $this->plugin('translate');
+$form->prepare();
+?>
+
+<?php echo $this->pageTitle($translate('Add'), 1, $translate('Vocabularies')); ?>
+<?php $this->trigger('view.edit.before'); ?>
+<?php echo $this->form()->openTag($form); ?>
+<div id="page-actions">
+    <?php $this->trigger('view.edit.page_actions'); ?>
+    <?php echo $this->cancelButton(); ?>
+    <button><?php echo $translate('Save'); ?></button>
+</div>
+<?php $this->trigger('view.edit.form.before', ['form' => $form]); ?>
+<?php echo $this->formRow($form->get('csrf')); ?>
+<?php echo $this->formCollection($form->get('vocabulary-info')); ?>
+<?php $this->trigger('view.edit.form.after', ['form' => $form]); ?>
+<?php echo $this->form()->closeTag(); ?>
+
+<?php $this->trigger('view.edit.after'); ?>

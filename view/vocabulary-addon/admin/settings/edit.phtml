@@ -1,0 +1,22 @@
+<?php
+
+$plugins = $this->getHelperPluginManager();
+$translate = $plugins->get('translate');
+$hyperlink = $plugins->get('hyperlink');
+
+$this->htmlElement('body')->appendAttribute('class', 'settings edit');
+
+$form->prepare();
+?>
+<?= $this->pageTitle($translate('Settings'), 1, $translate('Vocabulary Addition')) ?>
+<?= $this->form()->openTag($form) ?>
+
+
+<div id="page-actions">
+    <?= $hyperlink($translate('Vocabularies'), $this->url('admin/default', ['controller' => 'vocabulary']), ['class' => 'button']) ?>
+    <?= $hyperlink($translate('Backups'), $this->url('admin/vocabulary-settings', ['action' => 'backups'], true), ['class' => 'button']) ?>
+    <button type="submit"><?= $translate('Save') ?></button>
+</div>
+
+<?= $this->formCollection($form, false) ?>
+<?= $this->form()->closeTag() ?>

@@ -1,0 +1,17 @@
+<?php
+$translate = $this->plugin('translate');
+$this->form->setButtonLabel('Confirm delete'); // @translate
+?>
+<div id="sidebar-confirm">
+    <h3><?= $translate('Delete backup') ?></h3>
+    <p><?= sprintf($translate('Are you sure you would like to delete the file %s?'), $file) ?></p>
+    <?= $this->form($this->form) ?>
+</div>
+
+<?php echo $this->partial(
+    'vocabulary-addon/admin/settings/details',
+    [
+        'file' => $file,
+        'info' => $info
+    ]
+    ); ?>

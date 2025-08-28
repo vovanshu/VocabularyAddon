@@ -1,0 +1,17 @@
+<?php
+$translate = $this->plugin('translate');
+$this->form->setButtonLabel('Confirm restore'); // @translate
+?>
+<div id="sidebar-confirm">
+    <h3><?= $translate('Restore backup') ?></h3>
+    <p><?= sprintf($translate('Are you sure you would like to restore data from file %s?'), $file) ?></p>
+    <?= $this->form($this->form) ?>
+</div>
+
+<?php echo $this->partial(
+    'vocabulary-addon/admin/settings/details',
+    [
+        'file' => $file,
+        'info' => $info
+    ]
+    ); ?>

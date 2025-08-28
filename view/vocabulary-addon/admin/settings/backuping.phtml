@@ -1,0 +1,27 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var \RolesManager\Form\PermissionForm $form
+ */
+
+$plugins = $this->getHelperPluginManager();
+$translate = $plugins->get('translate');
+$hyperlink = $plugins->get('hyperlink');
+
+$this->htmlElement('body')->appendAttribute('class', 'permissions backup');
+?>
+
+<?= $this->pageTitle($translate('Backup'), 1, $translate('Vocabulary Addition')) ?>
+
+<div id="page-actions">
+    <?= $hyperlink($translate('Vocabularies'), $this->url('admin/default', ['controller' => 'vocabulary']), ['class' => 'button']) ?>
+    <?= $hyperlink($translate('Configure'), $this->url('admin/vocabulary-settings', ['action' => 'edit']), ['class' => 'button']) ?>
+    <?= $hyperlink($translate('Backups'), $this->url('admin/vocabulary-settings', ['action' => 'backups']), ['class' => 'button']) ?>
+</div>
+<fieldset id="general" class="section active"></fieldset>
+<?php
+foreach($result as $k => $v){
+    echo $k.' - '.$v.'<br>';
+}
+?>
+</fieldset>

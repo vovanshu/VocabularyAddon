@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: VocabularyAddon\n"
+"POT-Creation-Date: 2025-08-07 14:17+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: VocabularyAddon\n"
+"X-Generator: Poedit 3.4\n"
+
+#: modules/VocabularyAddon/src/Controller/Admin/PropertyController.php:199
+msgid "Property successfully deleted."
+msgstr "Властивість успішно видалено."
+
+#: modules/VocabularyAddon/src/Controller/Admin/ResourceClassController.php:200
+msgid "Class successfully deleted."
+msgstr "Клас успішно видалено."
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:32
+msgid "Edit all elements"
+msgstr "Відредагуйте всі елементи"
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:45
+msgid "Element can be deleted"
+msgstr "Елемент можна видалити"
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:58
+msgid "Backup Resource Templates"
+msgstr "Резервна копія Шаблонів Ресурсу"
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:130
+msgid "Restore successfully."
+msgstr "Відновлення успішно завершено."
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:169
+msgid "File backup successfully deleted."
+msgstr "Резервну копію файлу успішно видалено."
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/property/delete-confirm.phtml:10
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/resource-class/delete-confirm.phtml:10
+msgid "Deleting is not possible because there is metadata for this property!"
+msgstr "Видалення неможливе, оскільки для цієї властивості існують метадані!"
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:14
+msgid "Backup"
+msgstr "Резервна копія"
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:14
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:15
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/edit.phtml:11
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore.phtml:14
+msgid "Vocabulary Addition"
+msgstr "Розширення Словника"
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:19
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:15
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/edit.phtml:17
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore.phtml:19
+msgid "Backups"
+msgstr "Резервні копії"
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:20
+msgid "Backuping"
+msgstr "Резервне копіювання"
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:26
+msgid "Backups file no found."
+msgstr "Резервні копії не знайдено."
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:34
+msgid "Actions"
+msgstr "Дії"
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/details.phtml:5
+msgid "Details backup"
+msgstr "Деталі резервної копії"
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/details.phtml:6
+#, php-format
+msgid "File %s backup content"
+msgstr "Файл %s резервної копії містить"
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore-confirm.phtml:3
+msgid "Confirm restore"
+msgstr "Підтевердіть відновлення"

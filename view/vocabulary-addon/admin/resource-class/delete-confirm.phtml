@@ -1,0 +1,17 @@
+<?php
+if($allowDelete){
+    echo $this->deleteConfirm($this->resource, $this->resourceLabel, false);
+} else {
+    $translate = $this->plugin('translate');
+    echo $this->hyperlink('', '#', ['class' => 'sidebar-close o-icon-close', 'title' => $translate('Close')]);
+?>
+    <div id="sidebar-confirm">
+        <h3><?= sprintf($translate('Delete %s'), $translate($this->resourceLabel)) ?></h3>
+        <p><?= $translate('Deleting is not possible because there is metadata for this property!') ?></p>
+    </div>
+<?php
+}
+if (isset($this->partialPath)){
+    echo $this->partial($this->partialPath);
+}
+?>

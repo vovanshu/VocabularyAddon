@@ -1,0 +1,78 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var \RolesManager\Form\PermissionForm $form
+ */
+
+$plugins = $this->getHelperPluginManager();
+$escape = $plugins->get('escapeHtml');
+$translate = $plugins->get('translate');
+$hyperlink = $plugins->get('hyperlink');
+
+$this->htmlElement('body')->appendAttribute('class', 'vocabulary backups');
+?>
+
+<?= $this->pageTitle($translate('Backups'), 1, $translate('Vocabulary Addition')) ?>
+
+<div id="page-actions">
+    <?= $hyperlink($translate('Vocabularies'), $this->url('admin/default', ['controller' => 'vocabulary']), ['class' => 'button']) ?>
+    <?= $hyperlink($translate('Configure'), $this->url('admin/vocabulary-settings', ['action' => 'edit']), ['class' => 'button']) ?>
+    <?= $hyperlink($translate('Backuping'), $this->url('admin/vocabulary-settings', ['action' => 'backuping']), ['class' => 'button']) ?>
+</div>
+
+
+<?php if (empty($list)): ?>
+<div class="no-resources">
+    <p><?= $translate('Backups file no found.') ?></p>
+</div>
+
+<?php else: ?>
+<table class="tablesaw" data-tablesaw-mode="stack">
+    <thead>
+        <tr>
+            <th><?= $translate('Name') ?></th>
+            <th><?= $translate('Actions') ?></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+        foreach ($list as $file):
+            $pathinfo = pathinfo($file);
+        ?>
+        <tr>
+            <td>
+                <span class="list-name"><?= $pathinfo['basename'] ?></span>
+            </td>
+            <td>
+            <ul class="actions">
+                    <li><a href="#"
+                        class="o-icon-edit fa-reply sidebar-content"
+                        data-sidebar-content-url="<?= $escape($this->url('admin/vocabulary-settings', ['action' => 'restore-confirm', 'name' => $pathinfo['basename']])) ?>"
+                        aria-label="<?= $escape($translate('Restore')) ?>"
+                        title="<?= $escape($translate('Restore')) ?>"></a></li>
+                    <li><a href="#"
+                        class="o-icon-delete sidebar-content"
+                        data-sidebar-content-url="<?= $escape($this->url('admin/vocabulary-settings', ['action' => 'delete-confirm', 'name' => $pathinfo['basename']])) ?>"
+                        aria-label="<?= $escape($translate('Delete')) ?>"
+                        title="<?= $escape($translate('Delete')) ?>"></a></li>
+                    <li><a href="#"
+                        data-sidebar-content-url="<?= $escape($this->url('admin/vocabulary-settings', ['action' => 'details', 'name' => $pathinfo['basename']])) ?>"
+                        class="o-icon-more sidebar-content"
+                        aria-label="<?= $escape($translate('Details')) ?>"
+                        title="<?= $escape($translate('Details')) ?>"></a></li>
+                </ul>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+<div class="sidebar">
+    <a href="#"
+        class="sidebar-close o-icon-close"
+        aria-label="<?= $escape($translate('Close')) ?>"
+        title="<?= $escape($translate('Close')) ?>"></a>
+    <div class="sidebar-content"></div>
+</div>
+
+<?php endif; ?>

@@ -1,0 +1,23 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ */
+
+$plugins = $this->getHelperPluginManager();
+$translate = $plugins->get('translate');
+$hyperlink = $plugins->get('hyperlink');
+$this->htmlElement('body')->appendAttribute('class', 'property add');
+$form->prepare();
+?>
+
+<?= $this->pageTitle($translate('Add'), 1, $translate('Properties')) ?>
+<?= $this->form()->openTag($form) ?>
+
+<div id="page-actions">
+    <?php echo $this->cancelButton(); ?>
+    <button type="submit"><?= $translate('Add') ?></button>
+</div>
+
+<?= $this->formCollection($form, false) ?>
+
+<?= $this->form()->closeTag() ?>

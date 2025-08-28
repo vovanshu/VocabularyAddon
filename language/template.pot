@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"MIME-Version: 1.0\n"
+"POT-Creation-Date: 2025-08-07 14:17+0000\n"
+"Project-Id-Version: VocabularyAddon\n"
+"X-Domain: VocabularyAddon\n"
+"X-Generator: LanguagesManager\n"
+
+#: modules/VocabularyAddon/src/Controller/Admin/PropertyController.php:199
+msgid "Property successfully deleted."
+msgstr ""
+
+#: modules/VocabularyAddon/src/Controller/Admin/ResourceClassController.php:200
+msgid "Class successfully deleted."
+msgstr ""
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:32
+msgid "Edit all elements"
+msgstr ""
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:45
+msgid "Element can be deleted"
+msgstr ""
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:58
+msgid "Backup Resource Templates"
+msgstr ""
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:130
+msgid "Restore successfully."
+msgstr ""
+
+#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:169
+msgid "File backup successfully deleted."
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/property/delete-confirm.phtml:10
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/resource-class/delete-confirm.phtml:10
+msgid "Deleting is not possible because there is metadata for this property!"
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:14
+msgid "Backup"
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:14
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:15
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/edit.phtml:11
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore.phtml:14
+msgid "Vocabulary Addition"
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:19
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:15
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/edit.phtml:17
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore.phtml:19
+msgid "Backups"
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:20
+msgid "Backuping"
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:26
+msgid "Backups file no found."
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:34
+msgid "Actions"
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/details.phtml:5
+msgid "Details backup"
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/details.phtml:6
+#, php-format
+msgid "File %s backup content"
+msgstr ""
+
+#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore-confirm.phtml:3
+msgid "Confirm restore"
+msgstr ""
