@@ -39,6 +39,7 @@ class VocabularyControllerDelegator extends \Omeka\Controller\Admin\VocabularyCo
             'type' => 'checkbox',
             'options' => [
                 'label' => 'No update', // @translate
+                '' // ''
             ],
             'attributes' => [
                 'value' => True,

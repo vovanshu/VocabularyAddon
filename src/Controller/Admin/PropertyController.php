@@ -45,6 +45,7 @@ class PropertyController extends \Omeka\Controller\Admin\PropertyController
                 'type' => 'text',
                 'options' => [
                     'label' => 'Label', // @translate
+                    '' // ''
                 ],
                 'attributes' => [
                     'required' => true,
@@ -58,6 +59,7 @@ class PropertyController extends \Omeka\Controller\Admin\PropertyController
                 'type' => 'text',
                 'options' => [
                     'label' => 'Local name', // @translate
+                    '' // ''
                 ],
                 'attributes' => [
                     'required' => true,
@@ -71,6 +73,7 @@ class PropertyController extends \Omeka\Controller\Admin\PropertyController
                 'type' => 'textarea',
                 'options' => [
                     'label' => 'Comment', // @translate
+                    '' // ''
                 ],
                 'attributes' => [
                     'id' => 'o:comment',

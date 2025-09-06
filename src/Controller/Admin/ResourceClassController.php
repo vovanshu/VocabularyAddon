@@ -46,6 +46,7 @@ class ResourceClassController extends \Omeka\Controller\Admin\ResourceClassContr
                 'type' => 'text',
                 'options' => [
                     'label' => 'Label', // @translate
+                    '' // ''
                 ],
                 'attributes' => [
                     'required' => true,
@@ -59,6 +60,7 @@ class ResourceClassController extends \Omeka\Controller\Admin\ResourceClassContr
                 'type' => 'text',
                 'options' => [
                     'label' => 'Local name', // @translate
+                    '' // ''
                 ],
                 'attributes' => [
                     'required' => true,
@@ -72,6 +74,7 @@ class ResourceClassController extends \Omeka\Controller\Admin\ResourceClassContr
                 'type' => 'textarea',
                 'options' => [
                     'label' => 'Comment', // @translate
+                    '' // ''
                 ],
                 'attributes' => [
                     'id' => 'o:comment',

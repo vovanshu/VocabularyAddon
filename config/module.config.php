@@ -66,6 +66,12 @@ return [
                 'pattern' => '%s.mo',
                 'text_domain' => null,
             ],
+            [
+                'type' => 'gettext',
+                'base_dir' => OMEKA_PATH . '/files/languages/VocabularyAddon',
+                'pattern' => '%s.mo',
+                'text_domain' => null,
+            ],
         ],
     ],
     'VocabularyAddon' => [
