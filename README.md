@@ -29,7 +29,13 @@ See online issues on the [module issues] page on GitHub.
 License
 -------
 
-This module is published under the [GNU/GPL] license.
+This module is published under the [CeCILL v2.1] license, compatible with
+[GNU/GPL] and approved by [FSF] and [OSI].
+
+This software is governed by the CeCILL license under French law and abiding by
+the rules of distribution of free software. You can use, modify and/ or
+redistribute the software under the terms of the CeCILL license as circulated by
+CEA, CNRS and INRIA at the following URL "http://www.cecill.info".
 
 As a counterpart to the access to the source code and rights to copy, modify and
 redistribute granted by the license, users are provided only with a limited
@@ -47,7 +53,7 @@ and/or data to be ensured and, more generally, to use and operate it in the same
 conditions as regards security.
 
 The fact that you are presently reading this means that you have had knowledge
-of the license and that you accept its terms.
+of the CeCILL license and that you accept its terms.
 
 
 Copyright
@@ -60,5 +66,8 @@ Copyright
 [Omeka S]: https://omeka.org/s
 [Installing a module]: https://omeka.org/s/docs/user-manual/modules/#installing-modules
 [module issues]: https://github.com/vovanshu/VocabularyAddon/issues
+[CeCILL v2.1]: https://www.cecill.info/licences/Licence_CeCILL_V2.1-en.html
 [GNU/GPL]: https://www.gnu.org/licenses/gpl-3.0.html
+[FSF]: https://www.fsf.org
+[OSI]: http://opensource.org
 [vovanshu]: https://github.com/vovanshu "Volodimir Shumeyko"

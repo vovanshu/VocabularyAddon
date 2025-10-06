@@ -3,6 +3,93 @@
 namespace VocabularyAddon;
 
 return [
+    'permissions' => [
+        'classes' => [
+            'vocabulary' => 'Vocabularies', // @translate
+            'properties' => 'Properties', // @translate
+            'resourceclasses' => 'Resource Classes', // @translate
+        ],
+        'labels' => [
+            'settings_vocabularyaddon' => 'Settings Vocabulary Addition', // @translate
+        ],
+        'rules' => [
+            'vocabulary' => [
+                'Omeka\Controller\Admin\Vocabulary' => [
+                    'browse' => [
+                        'browse', 'properties', 'classes',
+                    ],
+                    'show' => [
+                        'show-details', 'show', 'read',
+                    ],
+                    'add' => [
+                        'add', 'import'
+                    ],
+                    'edit' => [
+                        'edit', 'update'
+                    ],
+                    'delete' => [
+                        'delete', 'delete-confirm'
+                    ],
+                ],
+                'Omeka\Api\Adapter\VocabularyAdapter' => [
+                    'add' => [
+                        'create'
+                    ],
+                    'edit' => [
+                        'update'
+                    ],
+                    'delete' => [
+                        'delete'
+                    ],
+                ]
+            ],
+            'properties' => [
+                'Omeka\Controller\Admin\Property' => [
+                    'browse' => [
+                        'browse',
+                    ],
+                    'show' => [
+                        'show-details', 'show', 'read'
+                    ],
+                    'add' => [
+                        'add'
+                    ],
+                    'edit' => [
+                        'edit'
+                    ],
+                    'delete' => [
+                        'delete'
+                    ],
+                ]
+            ],
+            'resourceclasses' => [
+                'Omeka\Controller\Admin\ResourceClass' => [
+                    'browse' => [
+                        'browse', 'show-details', 'show', 'read'
+                    ],
+                    'show' => [
+                        'show-details', 'show', 'read'
+                    ],
+                    'add' => [
+                        'add'
+                    ],
+                    'edit' => [
+                        'edit'
+                    ],
+                    'delete' => [
+                        'delete'
+                    ],
+                ]
+            ],
+            'modules' => [
+                'VocabularyAddon\Controller\Admin\SettingsController' => [
+                    'settings_vocabularyaddon' => [
+                        'edit', 'info-about', 'details', 'delete-confirm', 'delete', 'backups', 'backuping', 'restore-confirm', 'restore'
+                    ],
+                ],
+            ],
+        ],
+    ],
     'view_manager' => [
         'template_path_stack' => [
             dirname(__DIR__) . '/view',
@@ -74,15 +161,17 @@ return [
             ],
         ],
     ],
-    'VocabularyAddon' => [
-        'config' => [
-            'backups' => OMEKA_PATH.'/files/backups/VocabularyAddon/',
-            'path_permissions' => dirname(__DIR__).'/data/permissions',
-            'options' =>  [
-                'editall' => 'vocabulary_addon_edit_all',
-                'candelete' => 'vocabulary_addon_can_delete',
-                'backuprestpl' => 'vocabulary_addon_backup_resource_template',
-            ]
+    'vocabularyaddon' => [
+        'backups' => OMEKA_PATH.'/files/backup/VocabularyAddon/',
+        'settings' => [
+            'vocabulary_addon_edit_all' => 'false',
+            'vocabulary_addon_can_delete' => 'false',
+            'vocabulary_addon_backup_resource_template' => 'false',
+        ],
+        'options' =>  [
+            'editall' => 'vocabulary_addon_edit_all',
+            'candelete' => 'vocabulary_addon_can_delete',
+            'backuprestpl' => 'vocabulary_addon_backup_resource_template',
         ]
     ]
 ];
