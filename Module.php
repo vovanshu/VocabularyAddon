@@ -14,8 +14,8 @@ use Laminas\Mvc\MvcEvent;
 // use Laminas\Permissions\Acl\Assertion\AssertionAggregate;
 use Omeka\Module\AbstractModule;
 // use Omeka\Entity\Job;
-use AdminAddon\TraitGeneral;
-use AdminAddon\TraitModule;
+use VocabularyAddon\TraitGeneral;
+use VocabularyAddon\TraitModule;
 
 class Module extends AbstractModule
 {
