@@ -1,94 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Content-Transfer-Encoding: 8bit\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-14 11:06+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"POT-Creation-Date: 2025-09-06 12:35+0300\n"
-"Project-Id-Version: VocabularyAddon\n"
-"X-Domain: VocabularyAddon\n"
-"X-Generator: LanguagesManager\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
-#: modules/VocabularyAddon/src/Controller/Admin/PropertyController.php:61
-#: modules/VocabularyAddon/src/Controller/Admin/ResourceClassController.php:62
-msgid "Local name"
-msgstr ""
-
-#: modules/VocabularyAddon/src/Controller/Admin/PropertyController.php:202
-msgid "Property successfully deleted."
-msgstr ""
-
-#: modules/VocabularyAddon/src/Controller/Admin/ResourceClassController.php:203
-msgid "Class successfully deleted."
-msgstr ""
-
-#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:32
-msgid "Edit all elements"
-msgstr ""
-
-#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:45
-msgid "Element can be deleted"
-msgstr ""
-
-#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:58
-msgid "Backup Resource Templates"
-msgstr ""
-
-#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:130
-msgid "Restore successfully."
-msgstr ""
-
-#: modules/VocabularyAddon/src/Controller/Admin/SettingsController.php:169
-msgid "File backup successfully deleted."
-msgstr ""
-
-#: modules/VocabularyAddon/src/Controller/Admin/VocabularyControllerDelegator.php:41
-msgid "No update"
-msgstr ""
-
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/property/delete-confirm.phtml:10
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/resource-class/delete-confirm.phtml:10
+#: view/vocabulary-addon/admin/property/delete-confirm.phtml:10
+#: view/vocabulary-addon/admin/resource-class/delete-confirm.phtml:10
 msgid "Deleting is not possible because there is metadata for this property!"
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:14
+#: view/vocabulary-addon/admin/settings/backuping.phtml:14
 msgid "Backup"
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:14
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:15
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/edit.phtml:11
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore.phtml:14
+#: view/vocabulary-addon/admin/settings/backuping.phtml:14
+#: view/vocabulary-addon/admin/settings/backups.phtml:15
+#: view/vocabulary-addon/admin/settings/edit.phtml:11
+#: view/vocabulary-addon/admin/settings/restore.phtml:14
 msgid "Vocabulary Addition"
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backuping.phtml:19
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:15
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/edit.phtml:17
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore.phtml:19
+#: view/vocabulary-addon/admin/settings/backuping.phtml:19
+#: view/vocabulary-addon/admin/settings/backups.phtml:15
+#: view/vocabulary-addon/admin/settings/edit.phtml:17
+#: view/vocabulary-addon/admin/settings/restore.phtml:19
 msgid "Backups"
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:20
+#: view/vocabulary-addon/admin/settings/backups.phtml:20
 msgid "Backuping"
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:26
+#: view/vocabulary-addon/admin/settings/backups.phtml:26
 msgid "Backups file no found."
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/backups.phtml:34
+#: view/vocabulary-addon/admin/settings/backups.phtml:34
 msgid "Actions"
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/details.phtml:5
+#: view/vocabulary-addon/admin/settings/delete-confirm.phtml:6
+msgid "Delete backup"
+msgstr ""
+
+#: view/vocabulary-addon/admin/settings/delete-confirm.phtml:7
+#, php-format
+msgid "Are you sure you would like to delete the file %s?"
+msgstr ""
+
+#: view/vocabulary-addon/admin/settings/details.phtml:5
 msgid "Details backup"
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/details.phtml:6
+#: view/vocabulary-addon/admin/settings/details.phtml:6
 #, php-format
 msgid "File %s backup content"
 msgstr ""
 
-#: modules/VocabularyAddon/view/vocabulary-addon/admin/settings/restore-confirm.phtml:3
+#: view/vocabulary-addon/admin/settings/restore-confirm.phtml:6
+msgid "Restore backup"
+msgstr ""
+
+#: view/vocabulary-addon/admin/settings/restore-confirm.phtml:7
+#, php-format
+msgid "Are you sure you would like to restore data from file %s?"
+msgstr ""
+
+#: src/Controller/Admin/VocabularyControllerDelegator.php:39
+msgid "No update"
+msgstr ""
+
+#: src/Controller/Admin/SettingsController.php:32
+msgid "Edit all elements"
+msgstr ""
+
+#: src/Controller/Admin/SettingsController.php:45
+msgid "Element can be deleted"
+msgstr ""
+
+#: src/Controller/Admin/SettingsController.php:58
+msgid "Backup Resource Templates"
+msgstr ""
+
+#: src/Controller/Admin/SettingsController.php:76
+msgid "Settings save successfully."
+msgstr ""
+
+#: src/Controller/Admin/SettingsController.php:130
+msgid "Restore successfully."
+msgstr ""
+
+#: src/Controller/Admin/SettingsController.php:133
+msgid "Restore failed!"
+msgstr ""
+
+#: src/Controller/Admin/SettingsController.php:136
+msgid "Restore failed - file no found!"
+msgstr ""
+
+#: src/Controller/Admin/SettingsController.php:169
+msgid "File backup successfully deleted."
+msgstr ""
+
+#: src/Controller/Admin/ResourceClassController.php:62
+#: src/Controller/Admin/PropertyController.php:61
+msgid "Local name"
+msgstr ""
+
+#: src/Controller/Admin/ResourceClassController.php:127
+msgid "ResourceClass successfully created."
+msgstr ""
+
+#: src/Controller/Admin/ResourceClassController.php:176
+msgid "Class successfully saved."
+msgstr ""
+
+#: src/Controller/Admin/ResourceClassController.php:203
+msgid "Class successfully deleted."
+msgstr ""
+
+#: src/Controller/Admin/PropertyController.php:126
+msgid "Property successfully created."
+msgstr ""
+
+#: src/Controller/Admin/PropertyController.php:175
+msgid "Property successfully saved."
+msgstr ""
+
+#: src/Controller/Admin/PropertyController.php:202
+msgid "Property successfully deleted."
+msgstr ""
+
+#: src/TraitModule.php:78 src/TraitModule.php:363
+msgid "This module requires the module \"{module}\"."
+msgstr ""
+
+#: src/TraitModule.php:83
+msgid "This module requires modules \"{modules}\"."
+msgstr ""
+
+#: src/TraitModule.php:93
+msgid ""
+"This module cannot install its tables, because they exist already. Try to "
+"remove them first."
+msgstr ""
+
+#: src/TraitModule.php:271
+msgid "The module removed tables \"{tables}\" from a previous broken install."
+msgstr ""
+
+#: src/TraitModule.php:358
+msgid ""
+"This module requires the module \"{module}\", version {version} or above."
+msgstr ""
+
+#: src/TraitModule.php:471
+msgid ""
+"The module \"{module}\" was automatically deactivated because the "
+"dependencies are unavailable."
+msgstr ""
+
+#: src/TraitModule.php:490
+msgid "The directory \"{path}\" is not writeable."
+msgstr ""
+
+#: src/TraitModule.php:501
+msgid "The directory \"{path}\" is not writeable: {error}."
+msgstr ""
+
+#: config/module.config.php:10
+msgid "Resource Classes"
+msgstr ""
+
+#: config/module.config.php:13
+msgid "Settings Vocabulary Addition"
+msgstr ""
+
+#: view/vocabulary-addon/admin/settings/restore-confirm.phtml:3
 msgid "Confirm restore"
 msgstr ""
