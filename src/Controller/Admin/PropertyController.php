@@ -8,12 +8,12 @@ use Omeka\Api\Response;
 use Omeka\Stdlib\Message;
 use Omeka\Form\ConfirmForm;
 use Omeka\Entity\Property;
-use VocabularyAddon\Common;
+use VocabularyAddon\TraitGeneral;
 
 class PropertyController extends \Omeka\Controller\Admin\PropertyController
 {
 
-    use Common;
+    use TraitGeneral;
 
     public function __construct(ContainerInterface $services, $requestedName, $options)
     {
@@ -112,12 +112,12 @@ class PropertyController extends \Omeka\Controller\Admin\PropertyController
                 if (!empty($data['o:vocabulary'])) {
                     $property->setVocabulary($this->getVocabularyEntry($data['o:vocabulary']));
                 }
-                $property->setOwner($this->getUserEntry($this->getCurentUserID()));
+                $property->setOwner($this->getUserEntry($this->getCurrentUserID()));
                 $criteria = [
                     'vocabulary' => $data['o:vocabulary'],
                     'localName' => $data['o:local_name'],
                 ];
-                if($this->getAdapter('properties')->isUnique($property, $criteria)){
+                if($this->getApiAdapterManager('properties')->isUnique($property, $criteria)){
                     $this->getEntityManager()->persist($property);
                     $this->getEntityManager()->flush();
                     $this->getEntityManager()->refresh($property);
@@ -155,7 +155,7 @@ class PropertyController extends \Omeka\Controller\Admin\PropertyController
             $data = $this->params()->fromPost();
             $form->setData($data);
             if ($form->isValid()) {
-                $property = $this->getAdapter('properties')->findEntity($id);
+                $property = $this->getApiAdapterManager('properties')->findEntity($id);
                 if (!empty($data['o:local_name'])) {
                     $property->setLocalName($data['o:local_name']);
                 }

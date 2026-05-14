@@ -8,12 +8,12 @@ use Omeka\Api\Response;
 use Omeka\Stdlib\Message;
 use Omeka\Form\ConfirmForm;
 use Omeka\Entity\ResourceClass;
-use VocabularyAddon\Common;
+use VocabularyAddon\TraitGeneral;
 
 class ResourceClassController extends \Omeka\Controller\Admin\ResourceClassController
 {
 
-    use Common;
+    use TraitGeneral;
 
     public function __construct(ContainerInterface $services, $requestedName, $options)
     {
@@ -113,12 +113,12 @@ class ResourceClassController extends \Omeka\Controller\Admin\ResourceClassContr
                 if (!empty($data['o:vocabulary'])) {
                     $property->setVocabulary($this->getVocabularyEntry($data['o:vocabulary']));
                 }
-                $property->setOwner($this->getUserEntry($this->getCurentUserID()));
+                $property->setOwner($this->getUserEntry($this->getCurrentUserID()));
                 $criteria = [
                     'vocabulary' => $data['o:vocabulary'],
                     'localName' => $data['o:local_name'],
                 ];
-                if($this->getAdapter('resource_classes')->isUnique($property, $criteria)){
+                if($this->getApiAdapterManager('resource_classes')->isUnique($property, $criteria)){
                     $this->getEntityManager()->persist($property);
                     $this->getEntityManager()->flush();
                     $this->getEntityManager()->refresh($property);
@@ -156,7 +156,7 @@ class ResourceClassController extends \Omeka\Controller\Admin\ResourceClassContr
             $data = $this->params()->fromPost();
             $form->setData($data);
             if ($form->isValid()) {
-                $property = $this->getAdapter('resource_classes')->findEntity($id);
+                $property = $this->getApiAdapterManager('resource_classes')->findEntity($id);
                 if (!empty($data['o:local_name'])) {
                     $property->setLocalName($data['o:local_name']);
                 }

@@ -2,12 +2,8 @@
 
 namespace VocabularyAddon;
 
-if (!class_exists(\Common\TraitModule::class)) {
-    require_once dirname(__DIR__) . '/Common/TraitModule.php';
-}
-if (!class_exists(\VocabularyAddon\Common::class)) {
-    require_once __DIR__ . '/Common.php';
-}
+require_once __DIR__ . '/src/TraitGeneral.php';
+require_once __DIR__ . '/src/TraitModule.php';
 
 use Laminas\EventManager\SharedEventManagerInterface;
 use Laminas\EventManager\Event;
@@ -18,22 +14,19 @@ use Laminas\Mvc\MvcEvent;
 // use Laminas\Permissions\Acl\Assertion\AssertionAggregate;
 use Omeka\Module\AbstractModule;
 // use Omeka\Entity\Job;
-use Common\TraitModule;
-use VocabularyAddon\Common;
+use AdminAddon\TraitGeneral;
+use AdminAddon\TraitModule;
 
 class Module extends AbstractModule
 {
 
+    use TraitGeneral;
     use TraitModule;
-    use Common;
-
-    const NAMESPACE = __NAMESPACE__;
 
     public function getConfigForm(PhpRenderer $renderer)
     {
 
-        $url = $renderer->url('admin/vocabulary-settings', ['action' => 'edit']);
-        return "<script>window.location.href = '$url';</script>";
+        return $this->redirecToURL($renderer->url('admin/vocabulary-settings', ['action' => 'edit']));
 
     }
 
@@ -41,6 +34,7 @@ class Module extends AbstractModule
     {
 
         parent::onBootstrap($event);
+        $this->setMvcEvent($event);
         $this->addDefAclRules();
 
     }
@@ -53,9 +47,7 @@ class Module extends AbstractModule
      protected function addDefAclRules()
      {
 
-        $acl = $this->getServiceLocator()->get('Omeka\Acl');
-
-        $acl
+        $this->getAcl()
             ->allow(
                 [
                     \Omeka\Permissions\Acl::ROLE_GLOBAL_ADMIN,
@@ -70,7 +62,7 @@ class Module extends AbstractModule
                     'browse', 'show-details', 'properties', 'classes', 'add', 'edit', 'delete', 'delete-confirm'
                 ]
             );
-        $acl
+        $this->getAcl()
             ->allow(
                 [
                     \Omeka\Permissions\Acl::ROLE_GLOBAL_ADMIN,

@@ -11,11 +11,11 @@ $this->htmlElement('body')->appendAttribute('class', 'property edit');
 $form->prepare();
 ?>
 
-<?= $this->pageTitle($translate('Edit'), 1, $translate('Properties')) ?>
+<?= $this->pageTitle($translate('Edit'), 1, $translate('Classes')) ?>
 <?= $this->form()->openTag($form) ?>
 
 <div id="page-actions">
-    <?= $hyperlink($translate('Properties'), $this->url('admin/id', ['controller' => 'vocabulary', 'action' => 'classes', 'id' => $entity->vocabulary()->id()]), ['class' => 'button']) ?>
+    <?= $hyperlink($translate('Classes'), $this->url('admin/id', ['controller' => 'vocabulary', 'action' => 'classes', 'id' => $entity->vocabulary()->id()]), ['class' => 'button']) ?>
     <?php echo $this->cancelButton(); ?>
     <button type="submit"><?= $translate('Save') ?></button>
 </div>

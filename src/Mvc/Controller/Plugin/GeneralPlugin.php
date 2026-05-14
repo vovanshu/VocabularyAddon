@@ -3,14 +3,14 @@
 namespace VocabularyAddon\Mvc\Controller\Plugin;
 
 use Laminas\Mvc\Controller\Plugin\AbstractPlugin;
-use VocabularyAddon\Common;
+use VocabularyAddon\TraitGeneral;
 
-class CommonPlugin extends AbstractPlugin
+class GeneralPlugin extends AbstractPlugin
 {
 
-    use Common;
+    use TraitGeneral;
 
-    public function __construct($serviceLocator, $requestedName = Null, array $options = null)
+    public function __construct($serviceLocator, $requestedName = Null, ?array $options = null)
     {
         $this->setServiceLocator($serviceLocator);
     }

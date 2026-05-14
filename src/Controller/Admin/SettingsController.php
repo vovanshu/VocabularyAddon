@@ -7,12 +7,12 @@ use Laminas\Form\Form;
 use Omeka\Form\ConfirmForm;
 use Omeka\Stdlib\Message;
 use Omeka\Mvc\Exception;
-use VocabularyAddon\Common;
+use VocabularyAddon\TraitGeneral;
 
 class SettingsController extends AbstractActionController
 {
 
-    use Common;
+    use TraitGeneral;
 
     public function __construct($serviceLocator = Null, $requestedName = Null, $options = Null)
     {

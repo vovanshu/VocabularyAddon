@@ -102,7 +102,7 @@ return [
     ],
     'view_helpers' => [
         'factories' => [
-            'VocabularyAddonCommon' => Service\ControllerPlugin\CommonPluginFactory::class,
+            'VocabularyAddon' => Service\ControllerPlugin\GeneralPluginFactory::class,
         ],
     ],
     'controllers' => [
@@ -119,7 +119,7 @@ return [
     ],
     'service_manager' => [
         'factories' => [
-            'VocabularyAddon\Common' => Service\ControllerPlugin\CommonPluginFactory::class
+            'VocabularyAddon' => Service\ControllerPlugin\GeneralPluginFactory::class
         ],
     ],
     'router' => [
@@ -152,16 +152,10 @@ return [
                 'base_dir' => dirname(__DIR__) . '/language',
                 'pattern' => '%s.mo',
                 'text_domain' => null,
-            ],
-            [
-                'type' => 'gettext',
-                'base_dir' => OMEKA_PATH . '/files/languages/VocabularyAddon',
-                'pattern' => '%s.mo',
-                'text_domain' => null,
-            ],
+            ]
         ],
     ],
-    'vocabularyaddon' => [
+    'VocabularyAddon' => [
         'backups' => OMEKA_PATH.'/files/backup/VocabularyAddon/',
         'settings' => [
             'vocabulary_addon_edit_all' => 'false',

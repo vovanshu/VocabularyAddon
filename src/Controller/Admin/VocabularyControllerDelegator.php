@@ -9,15 +9,13 @@ use Omeka\Stdlib\RdfImporter;
 use Omeka\Stdlib\Message;
 use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
-// use Laminas\View\Model\JsonModel;
-// use Laminas\View\Model\ViewModel;
 use Interop\Container\ContainerInterface;
-use VocabularyAddon\Common;
+use VocabularyAddon\TraitGeneral;
 
 class VocabularyControllerDelegator extends \Omeka\Controller\Admin\VocabularyController
 {
 
-    use Common;
+    use TraitGeneral;
 
     public function __construct(ContainerInterface $services, $name, $callback, $options)
     {

@@ -1,7 +1,7 @@
 <?php
 $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
-$common = $this->VocabularyAddonCommon();
+$VocabularyAddon = $this->VocabularyAddon();
 $this->htmlElement('body')->appendAttribute('class', 'vocabs browse');
 ?>
 
@@ -40,7 +40,7 @@ $this->htmlElement('body')->appendAttribute('class', 'vocabs browse');
                 <?php echo $escape($translate($vocabulary->label())); ?>
                 <ul class="actions">
                     <?php $this->trigger('view.browse.actions', ['resource' => $vocabulary]); ?>
-                    <?php if (!$vocabulary->isPermanent() || $common->getSets('editall')): ?>
+                    <?php if (!$vocabulary->isPermanent() || $VocabularyAddon->getSets('editall')): ?>
                     <?php if ($vocabulary->userIsAllowed('update')): ?>
                     <li><?php echo $vocabulary->link('', 'edit', [
                         'class' => 'o-icon-edit',

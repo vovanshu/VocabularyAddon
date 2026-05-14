@@ -1,7 +1,7 @@
 <?php
 $translate = $this->plugin('translate');
 $escape = $this->plugin('escapeHtml');
-$common = $this->VocabularyAddonCommon();
+$VocabularyAddon = $this->VocabularyAddon();
 $this->htmlElement('body')->appendAttribute('class', 'browse vocabularies vocabulary-classes');
 $params = $this->params()->fromRoute();
 ?>
@@ -50,7 +50,7 @@ $params = $this->params()->fromRoute();
                         'title' => $translate('Edit'),
                     ]); ?></li>
                     <?php endif; ?>
-                    <?php if ($resourceClass->userIsAllowed('delete') && $common->getSets('candelete')): ?>
+                    <?php if ($resourceClass->userIsAllowed('delete') && $VocabularyAddon->getSets('candelete')): ?>
                     <li><?php echo $this->hyperlink('', '#', [
                         'data-sidebar-content-url' => $resourceClass->url('delete-confirm'),
                         'class' => 'o-icon-delete sidebar-content',
