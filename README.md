@@ -3,6 +3,9 @@ VocabularyAddon (module for Omeka S)
 
 Vocabulary, ResourceClass and Property addition
 
+All functionality will be moved to the module [AdminAddon]
+and further development will continue in it.
+
 Installation
 ------------
 
@@ -63,6 +66,7 @@ Copyright
 
 
 [VocabularyAddon]: https://github.com/vovanshu/VocabularyAddon
+[AdminAddon]: https://github.com/vovanshu/AdminAddon
 [Omeka S]: https://omeka.org/s
 [Installing a module]: https://omeka.org/s/docs/user-manual/modules/#installing-modules
 [module issues]: https://github.com/vovanshu/VocabularyAddon/issues
