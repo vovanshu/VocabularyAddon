@@ -5,15 +5,8 @@ namespace VocabularyAddon;
 require_once __DIR__ . '/src/TraitGeneral.php';
 require_once __DIR__ . '/src/TraitModule.php';
 
-use Laminas\EventManager\SharedEventManagerInterface;
-use Laminas\EventManager\Event;
-use Laminas\Mvc\Controller\AbstractController;
 use Laminas\View\Renderer\PhpRenderer;
-use Laminas\ModuleManager\ModuleManager;
-use Laminas\Mvc\MvcEvent;
-// use Laminas\Permissions\Acl\Assertion\AssertionAggregate;
 use Omeka\Module\AbstractModule;
-// use Omeka\Entity\Job;
 use VocabularyAddon\TraitGeneral;
 use VocabularyAddon\TraitModule;
 
@@ -29,16 +22,6 @@ class Module extends AbstractModule
         return $this->redirecToURL($renderer->url('admin/vocabulary-settings', ['action' => 'edit']));
 
     }
-
-    public function onBootstrap(MvcEvent $event): void
-    {
-
-        parent::onBootstrap($event);
-        $this->setMvcEvent($event);
-        $this->addDefAclRules();
-
-    }
-
 
     /**
      * Add ACL rules for this module.

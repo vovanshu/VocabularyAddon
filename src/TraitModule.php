@@ -29,14 +29,43 @@
 
 namespace VocabularyAddon;
 
-use Omeka\Stdlib\PsrMessage;
 use Laminas\I18n\Translator\TranslatorInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\Mvc\MvcEvent;
+use Laminas\ModuleManager\ModuleEvent;
+use Laminas\ModuleManager\ModuleManager;
 use Omeka\Module\Exception\ModuleCannotInstallException;
-use Omeka\Module\Manager as ModuleManager;
+use Omeka\Stdlib\PsrMessage;
+
 
 trait TraitModule
 {
+
+    protected $mvcEvent;
+
+    public function init(ModuleManager $moduleManager): void
+    {
+        $moduleManager->getEventManager()->attach(ModuleEvent::EVENT_MERGE_CONFIG, [$this, 'onEventMergeConfig']);
+    }
+
+    public function onEventMergeConfig(ModuleEvent $event): void
+    {
+    }
+
+    /**
+     * Bootstrap the module.
+     *
+     * @param MvcEvent $event
+     */
+    public function onBootstrap(MvcEvent $event)
+    {
+
+        $this->mvcEvent = $event;
+        $this->setServiceLocator($event->getApplication()->getServiceManager());
+        $this->attachListeners($this->getServiceLocator()->get('SharedEventManager'));
+        $this->addDefAclRules();
+
+    }
 
     /**
      * Get the config of the current module.
@@ -46,6 +75,13 @@ trait TraitModule
     public function getConfig()
     {
         return include $this->modulePath() . '/config/module.config.php';
+    }
+
+    /**
+     * Add ACL rules for this module.
+     */
+    protected function addDefAclRules()
+    {
     }
 
     /**

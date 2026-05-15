@@ -40,7 +40,7 @@ trait TraitCommon
     protected $logger;
 
 
-    protected function isAppDevMode(): bool
+    public function isAppDevMode(): bool
     {
 
         if ((isset($_SERVER['APPLICATION_ENV']) && 'development' == $_SERVER['APPLICATION_ENV']) ||
@@ -51,9 +51,9 @@ trait TraitCommon
 
     }
 
-    protected function modulePath(): string
+    public function modulePath(): string
     {
-        return dirname((new \ReflectionClass(static::class))->getFileName());
+        return dirname(__DIR__);
     }
 
     /**
